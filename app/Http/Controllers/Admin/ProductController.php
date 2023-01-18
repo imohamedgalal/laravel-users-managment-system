@@ -150,6 +150,6 @@ class ProductController extends Controller
     public function destroy($id)
     {
         Product::destroy($id);
-        return redirect('/products')->with('success', 'user Deleted!');
+        return redirect('/products')->with('success', 'Product Deleted!');
     }
 }

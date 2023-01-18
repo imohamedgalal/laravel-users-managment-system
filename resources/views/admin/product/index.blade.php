@@ -52,31 +52,38 @@
                                 @endcan
 
                                 @can('delete_product')
-                                    <a class="modal-effect btn btn btn-danger mr-2" data-effect="effect-scale" data-user_id="{{ $product->code }}" data-username="{{ $product->name }}" data-toggle="modal" href="#modaldemo8" ><i class="fa fa-trash"></i></a>
+                                    <!--<a class="modal-effect btn btn btn-danger mr-2" data-effect="effect-scale" data-user_id="{{ $product->code }}" data-username="{{ $product->name }}" data-toggle="modal" href="#modaldemo8" ><i class="fa fa-trash"></i></a>-->
 
-                                    <div class="modal" id="modaldemo8">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content modal-content-demo">
-                                                <div class="modal-header">
-                                                    <h6 class="modal-title">{{ trans('main_translate.Delete Product!!') }}</h6><button aria-label="Close" class="close"
-                                                        data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <form action="{{ route('delete_product',$product->code) }}" method="post">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <div class="modal-body">
-                                                        <p>{{ trans('main_translate.Are you sure want to delete this product?') }}</p><br>
-                                                        <input type="hidden" name="user_id" id="user_id" value="">
-                                                        <input class="form-control" name="username" id="username" type="text" readonly>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ trans('main_translate.Cancel') }}</button>
-                                                        <button type="submit" class="btn btn-danger">{{ trans('main_translate.Delete') }}</button>
-                                                    </div>
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                                    <!--<div class="modal" id="modaldemo8">-->
+                                    <!--    <div class="modal-dialog modal-dialog-centered" role="document">-->
+                                    <!--        <div class="modal-content modal-content-demo">-->
+                                    <!--            <div class="modal-header">-->
+                                    <!--                <h6 class="modal-title">{{ trans('main_translate.Delete Product!!') }}</h6><button aria-label="Close" class="close"-->
+                                    <!--                    data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>-->
+                                    <!--            </div>-->
+                                    <!--            <form action="{{ route('delete_product',$product->code) }}" method="post">-->
+                                    <!--                @method('delete')-->
+                                    <!--                @csrf-->
+                                    <!--                <div class="modal-body">-->
+                                    <!--                    <p>{{ trans('main_translate.Are you sure want to delete this product?') }}</p><br>-->
+                                    <!--                    <input type="hidden" name="user_id" id="user_id" value="">-->
+                                    <!--                    <input class="form-control" name="username" id="username" type="text" readonly>-->
+                                    <!--                </div>-->
+                                    <!--                <div class="modal-footer">-->
+                                    <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ trans('main_translate.Cancel') }}</button>-->
+                                    <!--                    <button type="submit" class="btn btn-danger">{{ trans('main_translate.Delete') }}</button>-->
+                                    <!--                </div>-->
+                                    <!--        </div>-->
+                                    <!--        </form>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    <form action="{{ route('delete_product',$product->code)  }}" method="post" onsubmit="return confirm('Are you sure you want to delete {{$product->name}} Product!!');">
+                                        @method('delete')
+                                        @csrf
+                                        {{-- <a class="btn btn-danger" onclick="return confirm('Are you sure?')" href="{{route('delete_log',$log->id)}}"><i class="fa fa-trash"></i></a> --}}
+
+                                            <button type="submit" class="btn btn-danger mr-2"><i class="fa fa-trash"></i></button>
+                                    </form>
                                 @endcan
 
                             </div>

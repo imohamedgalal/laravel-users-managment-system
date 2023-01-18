@@ -303,56 +303,56 @@ form .buttons button , .backBtn{
             </div>
 
 
-            <div class="fields" id="pay_coins">
-                <div class="input-field">
-                    <x-label for="eaemail" :value="__('Ea WebApp Email')" />
+            <!--<div class="fields" id="pay_coins">-->
+            <!--    <div class="input-field">-->
+            <!--        <x-label for="eaemail" :value="__('Ea WebApp Email')" />-->
 
-                    <x-input id="eaemail" class="block mt-1 w-full" type="email" name="eaemail" :value="old('eaemail')" placeholder="Enter webapp Email" />
-                </div>
+            <!--        <x-input id="eaemail" class="block mt-1 w-full" type="email" name="eaemail" :value="old('eaemail')" placeholder="Enter webapp Email" />-->
+            <!--    </div>-->
 
 
-                <div class="input-field">
-                    <x-label for="eapassword" :value="__('Ea WebApp Password')" />
+            <!--    <div class="input-field">-->
+            <!--        <x-label for="eapassword" :value="__('Ea WebApp Password')" />-->
 
-                    <x-input id="eapassword" class="block mt-1 w-full" type="text" name="eapassword" :value="old('eapassword')"  placeholder="Enter Webapp Password" />
-                </div>
+            <!--        <x-input id="eapassword" class="block mt-1 w-full" type="text" name="eapassword" :value="old('eapassword')"  placeholder="Enter Webapp Password" />-->
+            <!--    </div>-->
 
-                <div class="input-field">
-                    <x-label for="eacode1" :value="__('Ea Backup Code 1')" />
+            <!--    <div class="input-field">-->
+            <!--        <x-label for="eacode1" :value="__('Ea Backup Code 1')" />-->
 
-                    <x-input id="eacode1" class="block mt-1 w-full" type="text" name="eacode1" :value="old('eacode1')"  placeholder="Enter Backup code 1" />
-                </div>
+            <!--        <x-input id="eacode1" class="block mt-1 w-full" type="text" name="eacode1" :value="old('eacode1')"  placeholder="Enter Backup code 1" />-->
+            <!--    </div>-->
 
-                <div class="input-field">
-                    <x-label for="eacode2" :value="__('Ea Backup Code 2')" />
+            <!--    <div class="input-field">-->
+            <!--        <x-label for="eacode2" :value="__('Ea Backup Code 2')" />-->
 
-                    <x-input id="eacode2" class="block mt-1 w-full" type="text" name="eacode2" :value="old('eacode2')"  placeholder="Enter Backup code 2" />
-                </div>
+            <!--        <x-input id="eacode2" class="block mt-1 w-full" type="text" name="eacode2" :value="old('eacode2')"  placeholder="Enter Backup code 2" />-->
+            <!--    </div>-->
 
-                <div class="input-field">
-                    <x-label for="eacode3" :value="__('Ea Backup Code 3')" />
+            <!--    <div class="input-field">-->
+            <!--        <x-label for="eacode3" :value="__('Ea Backup Code 3')" />-->
 
-                    <x-input id="eacode3" class="block mt-1 w-full" type="text" name="eacode3" :value="old('eacode3')"  placeholder="Enter Backup code 3" />
-                </div>
-            </div>
+            <!--        <x-input id="eacode3" class="block mt-1 w-full" type="text" name="eacode3" :value="old('eacode3')"  placeholder="Enter Backup code 3" />-->
+            <!--    </div>-->
+            <!--</div>-->
 
-            <div class="fields">
-                <div class="input-field" id="pay_paypal">
-                    <div class="input-field">
-                        <x-label for="paypal_email" :value="__('Paypal Email')" />
-                        <x-input id="paypal_email" class="block mt-1 w-full" type="email" name="paypal_email" :value="old('paypal_email')" placeholder="Enter paypal Email" />
-                    </div>
-                </div>
-            </div>
-            <div class="fields">
-                <div class="input-field" id="cash_number">
-                    <div class="input-field">
-                        <x-label for="cash_number" :value="__('Enter Cash Number')" />
+            <!--<div class="fields">-->
+            <!--    <div class="input-field" id="pay_paypal">-->
+            <!--        <div class="input-field">-->
+            <!--            <x-label for="paypal_email" :value="__('Paypal Email')" />-->
+            <!--            <x-input id="paypal_email" class="block mt-1 w-full" type="email" name="paypal_email" :value="old('paypal_email')" placeholder="Enter paypal Email" />-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+            <!--<div class="fields">-->
+            <!--    <div class="input-field" id="cash_number">-->
+            <!--        <div class="input-field">-->
+            <!--            <x-label for="cash_number" :value="__('Enter Cash Number')" />-->
 
-                        <x-input id="cash_number" class="block mt-1 w-full" type="text" name="cash_number" :value="old('cash_number')"  placeholder="Enter Cash Number" />
-                    </div>
-                </div>
-            </div>
+            <!--            <x-input id="cash_number" class="block mt-1 w-full" type="text" name="cash_number" :value="old('cash_number')"  placeholder="Enter Cash Number" />-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
 
             <div>
 
@@ -369,47 +369,47 @@ form .buttons button , .backBtn{
     <script src="{{ URL::asset('adminlte/assets/plugins/select2/js/select2.full.min.js') }}"></script>
 <script>
 
-    $(function () {
+    // $(function () {
       //Initialize Select2 Elements
-      $('.product').select2({
-        placeholder: "Select Product",
+    //   $('.product').select2({
+    //     placeholder: "Select Product",
 
-      });
-      $('.pay_method').select2({
-        placeholder: "Select Pay Method",
+    //   });
+    //   $('.pay_method').select2({
+    //     placeholder: "Select Pay Method",
 
-      })
-    });
-
-
+    //   })
+    // });
 
 
-    $('#pay_coins').hide();
-    $('#pay_paypal').hide();
-    $('#cash_number').hide();
 
-  $("#pay_method").change(function() {
-    if (this.value == "") {
-        $('#pay_coins').hide();
-        $('#pay_paypal').hide();
-        $('#cash_number').hide();
-    }
-    if (this.value == "coins") {
-        $('#pay_coins').show();
-        $('#pay_paypal').hide();
-        $('#cash_number').hide();
-    }
-    if(this.value == "paypal") {
-        $('#pay_coins').hide();
-        $('#pay_paypal').show();
-        $('#cash_number').hide();
-    }
-    if(this.value == "cash") {
-        $('#pay_coins').hide();
-        $('#pay_paypal').hide();
-        $('#cash_number').show();
-    }
-    }).change();
+
+    // $('#pay_coins').hide();
+    // $('#pay_paypal').hide();
+    // $('#cash_number').hide();
+
+//   $("#pay_method").change(function() {
+//     if (this.value == "") {
+//         $('#pay_coins').hide();
+//         $('#pay_paypal').hide();
+//         $('#cash_number').hide();
+//     }
+//     if (this.value == "coins") {
+//         $('#pay_coins').show();
+//         $('#pay_paypal').hide();
+//         $('#cash_number').hide();
+//     }
+//     if(this.value == "paypal") {
+//         $('#pay_coins').hide();
+//         $('#pay_paypal').show();
+//         $('#cash_number').hide();
+//     }
+//     if(this.value == "cash") {
+//         $('#pay_coins').hide();
+//         $('#pay_paypal').hide();
+//         $('#cash_number').show();
+//     }
+//     }).change();
 
 
 
